@@ -35,10 +35,11 @@ function añadirlista () {
 function sortearAmigo() {
 
     if (nombreAmigos == ""){
-        sortearAmigo()
+            alert("No hay ningun nombre en la lista")
     } else{
         let listaResultado = document.getElementById('resultado')
         listaResultado.innerHTML ='';
+
         let numeroSorteo = Math.floor(Math.random()*nombreAmigos.length);
         let amigoSorteo = nombreAmigos[numeroSorteo]
         let listItem = document.createElement('li');
