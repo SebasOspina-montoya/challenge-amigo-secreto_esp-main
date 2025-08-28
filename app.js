@@ -31,3 +31,19 @@ function añadirlista () {
     lista.appendChild(listItem);
   }
 }
+
+function sortearAmigo() {
+
+    if (nombreAmigos == ""){
+        sortearAmigo()
+    } else{
+        let listaResultado = document.getElementById('resultado')
+        listaResultado.innerHTML ='';
+        let numeroSorteo = Math.floor(Math.random()*nombreAmigos.length);
+        let amigoSorteo = nombreAmigos[numeroSorteo]
+        let listItem = document.createElement('li');
+        listItem.textContent = amigoSorteo;
+        listaResultado.appendChild(listItem);
+    }
+    
+}
